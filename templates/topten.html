@@ -1,0 +1,66 @@
+<div>
+    <div class="panel panel-default">
+     <div class="panel-heading"> Example #1 </div>
+    <div class="panel-body">Type and show bindings</div>
+    </div>
+    <div class="col-md-6">
+    <form>
+        <div class="form-group">
+        <label for="fname">first name</label>
+        <input name="fname" type="text" placeholder="e.g. first name" ng-model="fname"/>
+        <label for="lname">last name</label>
+        <input name="lname" type="text" placeholder="e.g. last name" ng-model="lname"/>
+        </div>
+    </form>
+    </div>
+    
+
+    <p>Hello {{fname}} {{lname}} </p>
+    <br/>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"> Example #2 </div>
+        <div class="panel-body">Show list of items: ng-repeat from view</div>
+    </div>
+
+    <ul>
+        <li ng-repeat="item in vm.items"> {{item}} </li>
+    </ul>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"> Example #3 </div>
+        <div class="panel-body">Show list of items: add items</div>
+    </div>
+
+    <ul>
+        <li ng-repeat="item in vm.items"> {{item}} </li>
+    </ul>
+    <form ng-submit="vm.additem()">
+        <input type="text" placeholder="add item" ng-model="vm.newitem"/>
+        <input type="submit"  value="add" />
+    </form>
+    <br/>
+    <div class="panel panel-default">
+        <div class="panel-heading"> Example #4 </div>
+        <div class="panel-body">Show list of items: delete items</div>
+    </div>
+
+    <ul>
+        <li ng-repeat="item in vm.items"> {{item}}
+            <a href="" ng-click="vm.removeitem(item)" role="button">remove</a>
+
+        </li>
+    </ul>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"> Example #5 </div>
+        <div class="panel-body">Show list of items: more info</div>
+    </div>
+
+    <ul>
+        <li ng-repeat="item in vm.bigitems"> {{item.casenum}}: {{item.itemnum}} - {{item.item}}
+            <a href="" ng-click="vm.removebigitem(item)" role="button">remove</a>
+
+        </li>
+    </ul>
+</div>
