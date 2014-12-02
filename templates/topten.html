@@ -1,23 +1,29 @@
 <div>
-    <div class="panel panel-default">
-     <div class="panel-heading"> Example #1 </div>
-    <div class="panel-body">Type and show bindings</div>
-    </div>
-    <div class="col-md-6">
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading"> Example #1 </div>
+        <div >Type and show bindings</div>
+      </div>
+
+
     <form>
         <div class="form-group">
         <label for="fname">first name</label>
-        <input name="fname" type="text" placeholder="e.g. first name" ng-model="fname"/>
+        <input name="fname" class="form-control" type="text" placeholder="e.g. first name" ng-model="fname"/>
         <label for="lname">last name</label>
-        <input name="lname" type="text" placeholder="e.g. last name" ng-model="lname"/>
+        <input name="lname" class="form-control" type="text" placeholder="e.g. last name" ng-model="lname"/>
         </div>
     </form>
-    </div>
 
+          <a  ng-click="open = !open">toggle</a>
+          <div ng-show="open">content</div>
+          <br/>
 
     <p>Hello {{fname}} {{lname}} </p>
-    <br/>
 
+
+    <div class="col-md-6">
     <div class="panel panel-default">
         <div class="panel-heading"> Example #2 </div>
         <div class="panel-body">Show list of items: ng-repeat from view</div>
@@ -26,7 +32,9 @@
     <ul>
         <li ng-repeat="item in vm.items"> {{item}} </li>
     </ul>
+    </div>
 
+    <div class="col-md-6">
     <div class="panel panel-default">
         <div class="panel-heading"> Example #3 </div>
         <div class="panel-body">Show list of items: add items</div>
@@ -39,7 +47,8 @@
         <input type="text" placeholder="add item" ng-model="vm.newitem"/>
         <input type="submit"  value="add" />
     </form>
-    <br/>
+
+    </div>
     <div class="panel panel-default">
         <div class="panel-heading"> Example #4 </div>
         <div class="panel-body">Show list of items: delete items</div>
@@ -63,4 +72,17 @@
 
         </li>
     </ul>
+
+    <div class="panel panel-default">
+        <div class="panel-heading"> Example #6 </div>
+        <div class="panel-body">Directive</div>
+    </div>
+
+    <p>this is an element directive:
+    <my-Social-Buttons> </my-Social-Buttons></p>
+<p>This is an attribute directive</p>
+    <label for="">Click the text and all will Select</label>
+    <input type="text" ng-model="fname" my-directive=""     />
+
+
 </div>

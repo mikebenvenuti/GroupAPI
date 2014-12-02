@@ -1,6 +1,9 @@
 //  
 angular
-    .module('app',['ngRoute'])
+    .module('app',['ngRoute',
+        'MyDirective',
+        'MySocialButtons'
+    ])
     .config(SetRoute)
     .controller('groupctrl',loadgroups)
     .controller('myctrl',function() {})
